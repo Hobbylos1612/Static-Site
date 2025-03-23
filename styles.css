@@ -1,9 +1,9 @@
 /* Variables for consistent styling */
 :root {
-    --primary-color: #3498db;
-    --secondary-color: #2c3e50;
-    --text-color: #333;
-    --background-color: #f9f9f9;
+    --primary-color: #FFD700; /* Yellow */
+    --secondary-color: #1E1E1E; /* Dark Gray */
+    --text-color: #FFFFFF; /* White */
+    --background-color: #121212; /* Dark Background */
     --spacing: 20px;
 }
 
@@ -15,16 +15,20 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Poppins', sans-serif;
     line-height: 1.6;
     color: var(--text-color);
     background-color: var(--background-color);
 }
 
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 600;
+}
+
 /* Header styles */
 .header {
     background-color: var(--secondary-color);
-    color: white;
+    color: var(--primary-color); /* Updated to use primary color for text */
     padding: var(--spacing);
     text-align: center;
 }
@@ -40,18 +44,18 @@ body {
 }
 
 .header nav ul li a {
-    color: white;
+    color: var(--primary-color);
     text-decoration: none;
     transition: color 0.3s;
 }
 
 .header nav ul li a:hover {
-    color: var(--primary-color);
+    color: var(--text-color);
 }
 
 /* Main content styles */
 .main-content {
-    max-width: 1200px;
+    max-width: 800px;
     margin: 0 auto;
     padding: var(--spacing);
 }
@@ -59,54 +63,31 @@ body {
 .hero {
     text-align: center;
     padding: calc(var(--spacing) * 2) var(--spacing);
-    background-color: white;
+    background-color: var(--secondary-color);
     border-radius: 8px;
     margin-bottom: var(--spacing);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-/* Features section */
-.features {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: var(--spacing);
-    padding: var(--spacing) 0;
-}
-
-.feature-card {
-    background-color: white;
+/* Card styles */
+.card {
+    background-color: var(--secondary-color);
+    color: var(--primary-color); /* Updated to use primary color for text */
     padding: var(--spacing);
+    margin-bottom: var(--spacing);
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s;
 }
 
-.feature-card:hover {
-    transform: translateY(-5px);
-}
-
-.feature-card h3 {
-    color: var(--primary-color);
-    margin-bottom: 10px;
+.card h2, .card p {
+    color: var(--primary-color); /* Updated to use primary color for text */
 }
 
 /* Footer styles */
 .footer {
     background-color: var(--secondary-color);
-    color: white;
+    color: var(--primary-color);
     text-align: center;
     padding: var(--spacing);
     margin-top: var(--spacing);
-}
-
-/* Responsive design */
-@media (max-width: 768px) {
-    .features {
-        grid-template-columns: 1fr;
-    }
-
-    .header nav ul li {
-        display: block;
-        margin: 10px 0;
-    }
 }
