@@ -1,0 +1,112 @@
+/* Variables for consistent styling */
+:root {
+    --primary-color: #3498db;
+    --secondary-color: #2c3e50;
+    --text-color: #333;
+    --background-color: #f9f9f9;
+    --spacing: 20px;
+}
+
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--background-color);
+}
+
+/* Header styles */
+.header {
+    background-color: var(--secondary-color);
+    color: white;
+    padding: var(--spacing);
+    text-align: center;
+}
+
+.header nav ul {
+    list-style: none;
+    padding: var(--spacing) 0;
+}
+
+.header nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+.header nav ul li a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.header nav ul li a:hover {
+    color: var(--primary-color);
+}
+
+/* Main content styles */
+.main-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: var(--spacing);
+}
+
+.hero {
+    text-align: center;
+    padding: calc(var(--spacing) * 2) var(--spacing);
+    background-color: white;
+    border-radius: 8px;
+    margin-bottom: var(--spacing);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Features section */
+.features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--spacing);
+    padding: var(--spacing) 0;
+}
+
+.feature-card {
+    background-color: white;
+    padding: var(--spacing);
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+}
+
+.feature-card h3 {
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+/* Footer styles */
+.footer {
+    background-color: var(--secondary-color);
+    color: white;
+    text-align: center;
+    padding: var(--spacing);
+    margin-top: var(--spacing);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .features {
+        grid-template-columns: 1fr;
+    }
+
+    .header nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+}
